@@ -15,15 +15,14 @@ Collect places to take the PCR test
 Processing frequently asked questions by searching among users
 Create an opportunity for the user to make an appointment online for an infectious diseases doctor, take a PCR test
 ## Type of the user-interface
+We have chosen a format of web application for our project. And to connect the interface with the database we are going to use PHP as a programming language. PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
+
+## Programming Language and database server
 Methods: 
 To start with, we used PHP to develop the backend side of the website.
 A quick overview: PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
-Even though connecting PHP to Oracle did not seem so complicated, we were somewhat puzzled by the discrepancy between our database version and the XAMPP version of the database. Nevertheless, we were able to connect to our database with the following actions:
-We downloaded XAMPP (in our case, version 3.2.2) on Windows 32-bit. We also want to clarify that we had Oracle 11g installed before, so we didn't have to install it either. Next, we needed to install Oracle Instant Client 12.1 version, because we needed to establish a connection to the database locally or remotely. It also has additional functions for data transfer.
-After all the installations, we had to specify the path to our programs in the environment variable path.
-Then go to the XAMPP settings and uncomment the field .extension=php_oci8.dll so that we can work with our database in the future. It may also turn out(as in our case) that some libraries are missing. In this case, you will need to go to Oracle Instant Client and copy the libraries manually and put them in XAMPP using the following path C:\xampp\php\ext.
+Even though connecting PHP to Oracle did not seem so complicated, we were somewhat puzzled by the discrepancy between our database version and the XAMPP version of the database. 
 At the end we opened our connect.php file and wrote the following command there:
-
 
 ```php
 <?php
@@ -41,3 +40,6 @@ else {
 oci_close($conn);
 ?>
 ```
+PHP - backend;
+Front-end starter pack (HTML,CSS + Bootstrap 4);
+Database server: XAMPP.
