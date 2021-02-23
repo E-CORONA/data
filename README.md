@@ -43,3 +43,90 @@ oci_close($conn);
 PHP - backend;
 Front-end starter pack (HTML,CSS + Bootstrap 4);
 Database server: XAMPP.
+
+## Data and Results
+
+Let's move on to how we inserted big data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
+It helped us to think through the logic and development of the functionality - drawing up an ERD chart where we listed the name of the tables, the logic through which they are linked to each other (foreign key), and how they can play into our hands in sorting the necessary information when searching.
+Link for ERD in the data repository of the organization: https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
+
+**Data about the medical centers:**
+mcenter_id NUMBER(4) **primary key** - medical center’s identifier
+mcenter_name VARCHAR2(100) - medical center’s name
+city VARCHAR2(50) - the city where the medical center locates
+address VARCHAR2(100) - address of the medical center
+contacts NUMBER(11) - the contact number of the medical center
+
+**Data about the doctors:**
+doctor_id NUMBER(5) **primary key** - doctor’s identifier
+doctor_name VARCHAR2(100) - doctor’s full name
+speciality VARCHAR2(100) - the field on which doctor specializes 
+experience NUMBER(2) - number of years on work
+home_visits BOOLEAN - if the doctor accepts the patients at home
+accepts_children BOOLEAN - if the doctor accepts the children in therapies
+initial_reception NUMBER(6) - the price for very first therapy
+secondary_reception NUMBER(6) - the price for therapy
+mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor works
+
+**Data about the PCR:**
+center_id NUMBER(4) **primary key** - test accepting center’s identifier
+city VARCHAR2(50) - the city where test accepting center locates
+center_name VARCHAR2(100) - test accepting center’s name
+address VARCHAR(100) - address of the test accepting center
+cost NUMBER(6) - cost of the test
+webpage VARCHAR2(100) - web page of test accepting center
+contacts NUMBER(11) -  the contact number of the test accepting center
+additional_inf VARCHAR2(100)- additional information on test accepting center
+queues VARCHAR2(100) - information about queues to test
+fax NUMBER(11) - the fax number of the test accepting center
+
+**Data about the FAQ:**
+question_id NUMBER(4) **primary key** - questions’s identifier
+question VARCHAR2(1000)- the question which is frequently asked
+answer VARCHAR2(1000) - answer to the question
+admin_id NUMBER(2) **foreign key** - admin, who have edited FAQ
+
+**Data about News:**
+topic VARCHAR2(500) - main topic
+thesis VARCHAR2(1000) - content data
+admin_id NUMBER(2) **foreign key** - admin id
+news_image BLOB - new's image
+
+**Data about Admins**
+first_name VARCHAR2(50) **primary key** - admin name
+last_name VARCHAR2(50) - admin surname
+email VARCHAR2(50) - contact email
+password VARCHAR2(20) - password
+
+**Data about Users:**
+user_uid NUMBER (5) NOT NULL **primary key** - user id
+first_name VARCHAR2 (50) - user name
+last_name VARCHAR2 (50) - user surname
+city VARCHAR2 (50) - user city
+contact_number NUMBER (11) - contact number
+email VARCHAR2 (50) - contact emil
+password VARCHAR2 (50) - password
+profile_image BLOB - user's image
+
+**Data about Online Consultation:**
+consultation_id NUMBER(5) **primary key** - record id
+user_uid NUMBER(5) **foreign key** - user id
+doctor_id NUMBER(5) **foreign key** - doctor id
+first_name VARCHAR2(26) - name
+last_name VARCHAR2(256) - surname
+age NUMBER(6) - age
+phone VARCHAR2(128) - contact number
+city VARCHAR2(128) - city
+doctor_name VARCHAR2(256) - doctor's name
+clinics VARCHAR2(1024) - medical institution
+consultation_date VARCHAR2(256)) - consultation date
+
+**Data about Online PCR:**
+pcr_id NUMBER(5) **primary key** - pcr record id
+center_id NUMBER(4) **foreign key** - center id
+user_uid NUMBER(5) **foreign key** - user id
+first_name VARCHAR2(26) - name
+last_name VARCHAR2(256) - surname
+city VARCHAR2(128) - city
+punkt VARCHAR2(1024) - point
+pcr_date VARCHAR2(256)) - pcr date
