@@ -44,13 +44,39 @@ PHP - backend;
 Front-end starter pack (HTML,CSS + Bootstrap 4);
 Database server: XAMPP.
 
-## Data and Results
+## General questions
 
-Let's move on to how we inserted big data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
+1. What is the general purpose of the project?
+2. Which type of information can retrieve any user(Patient,Admin,Institutions)?
+3. How can the patient be sure that he will be served by a highly qualified doctor?
+4. Is it possible to gather information to create infographics?
+5. How can patients get answers to general questions?
+6. What are the main functions that a patient is allowed to do?
+7. What kind of information can users see about doctors?
+8. What kind of information can users see about medical centers?
+9. Where can the user display the list of tests and consultation he registered before?
+10. From how many modules does the project consist and what are them?
+11. What is the importance of the project?
+12. Who are the users of the website?
+13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
+14. How would this project ease the work of medical centers and doctors?
+15. Are there any websites with similar services in Kazakhstan?
+
+## Dataset for Project
+
+Let's move on to how we will insert data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
 It helped us to think through the logic and development of the functionality - drawing up an ERD chart where we listed the name of the tables, the logic through which they are linked to each other (foreign key), and how they can play into our hands in sorting the necessary information when searching.
+
 **Link for ERD in the data repository of the organization:** https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
+
 **Link for dataset which will be used in project:** https://docs.google.com/spreadsheets/d/1YsA53Bu3LX_XLowugBjd5CJlRYzsj_NnvpWKkGmVC50/edit?usp=sharing
+
 Reason why we have chosen to generate our own dataset - we want to make project realistic and use data from official websites of medical webpages of Kazakhstan Medical Organizations.
+![users](userData.png)
+![doctor](doctorData.png)
+![medCenter](medCenterData.png)
+
+## Data Tables' Description
 
 **Data about the medical centers:**
 - mcenter_id NUMBER(4) **primary key** - medical center’s identifier
@@ -132,24 +158,6 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 - city VARCHAR2(128) - city
 - punkt VARCHAR2(1024) - point
 - pcr_date VARCHAR2(256)) - pcr date
-
-## General questions
-
-1. What is the general purpose of the project?
-2. Which type of information can retrieve any user(Patient,Admin,Institutions)?
-3. How can the patient be sure that he will be served by a highly qualified doctor?
-4. Is it possible to gather information to create infographics?
-5. How can patients get answers to general questions?
-6. What are the main functions that a patient is allowed to do?
-7. What kind of information can users see about doctors?
-8. What kind of information can users see about medical centers?
-9. Where can the user display the list of tests and consultation he registered before?
-10. From how many modules does the project consist and what are them?
-11. What is the importance of the project?
-12. Who are the users of the website?
-13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
-14. How would this project ease the work of medical centers and doctors?
-15. Are there any websites with similar services in Kazakhstan?
 
 ##  Functionalities and Features of the project
 ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
