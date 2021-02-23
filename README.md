@@ -130,3 +130,23 @@ mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor
 - city VARCHAR2(128) - city
 - punkt VARCHAR2(1024) - point
 - pcr_date VARCHAR2(256)) - pcr date
+
+## General questions
+
+1. What is the general purpose of the project?
+2. Which type of information can retrieve any user(Patient,Admin,Institutions)?
+3. How can the patient be sure that he will be served by a highly qualified doctor?
+4. Is it possible to gather information to create infographics?
+5. How can patients get answers to general questions?
+6. What are the main functions that a patient is allowed to do?
+7. What kind of information can users see about doctors?
+8. What kind of information can users see about medical centers?
+9. Where can the user display the list of tests and consultation he registered before?
+10. From how many modules does the project consist and what are them?
+11. What is the importance of the project?
+12. Who are the users of the website?
+13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
+14. How would this project ease the work of medical centers and doctors?
+15. Are there any websites with similar services in Kazakhstan?
+
+The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
