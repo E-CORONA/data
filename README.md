@@ -151,7 +151,8 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 14. How would this project ease the work of medical centers and doctors?
 15. Are there any websites with similar services in Kazakhstan?
 
-The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
-
 ##  Functionalities and Features of the project
 ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
+The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
+
+
