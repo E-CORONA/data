@@ -48,25 +48,27 @@ Database server: XAMPP.
 
 Let's move on to how we inserted big data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
 It helped us to think through the logic and development of the functionality - drawing up an ERD chart where we listed the name of the tables, the logic through which they are linked to each other (foreign key), and how they can play into our hands in sorting the necessary information when searching.
-Link for ERD in the data repository of the organization: https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
+**Link for ERD in the data repository of the organization:** https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
+**Link for dataset which will be used in project:** https://docs.google.com/spreadsheets/d/1YsA53Bu3LX_XLowugBjd5CJlRYzsj_NnvpWKkGmVC50/edit?usp=sharing
+Reason why we have chosen to generate our own dataset - we want to make project realistic and use data from official websites of medical webpages of Kazakhstan Medical Organizations.
 
 **Data about the medical centers:**
-mcenter_id NUMBER(4) **primary key** - medical center’s identifier
-mcenter_name VARCHAR2(100) - medical center’s name
-city VARCHAR2(50) - the city where the medical center locates
-address VARCHAR2(100) - address of the medical center
-contacts NUMBER(11) - the contact number of the medical center
+- mcenter_id NUMBER(4) **primary key** - medical center’s identifier
+- mcenter_name VARCHAR2(100) - medical center’s name
+- city VARCHAR2(50) - the city where the medical center locates
+- address VARCHAR2(100) - address of the medical center
+- contacts NUMBER(11) - the contact number of the medical center
 
 **Data about the doctors:**
-doctor_id NUMBER(5) **primary key** - doctor’s identifier
-doctor_name VARCHAR2(100) - doctor’s full name
-speciality VARCHAR2(100) - the field on which doctor specializes 
-experience NUMBER(2) - number of years on work
-home_visits BOOLEAN - if the doctor accepts the patients at home
-accepts_children BOOLEAN - if the doctor accepts the children in therapies
-initial_reception NUMBER(6) - the price for very first therapy
-secondary_reception NUMBER(6) - the price for therapy
-mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor works
+- doctor_id NUMBER(5) **primary key** - doctor’s identifier
+- doctor_name VARCHAR2(100) - doctor’s full name
+- speciality VARCHAR2(100) - the field on which doctor specializes 
+- experience NUMBER(2) - number of years on work
+- home_visits BOOLEAN - if the doctor accepts the patients at home
+- accepts_children BOOLEAN - if the doctor accepts the children in therapies
+- initial_reception NUMBER(6) - the price for very first therapy
+- secondary_reception NUMBER(6) - the price for therapy
+- mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor works
 
 **Data about the PCR:**
 - center_id NUMBER(4) **primary key** - test accepting center’s identifier
@@ -150,3 +152,4 @@ mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor
 15. Are there any websites with similar services in Kazakhstan?
 
 The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
+
