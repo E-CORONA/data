@@ -163,7 +163,7 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
 The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
 
-## Data modeling and database design 
+## Data modeling and database design. ER Diagram.
 ![ER Diagram](SmellsLikeTeamSpirit-ER.png)
 We have used relations: one-to-many, many-to-many.
 
@@ -182,7 +182,7 @@ But, since we have the closest links between the data of each table (getting the
 - one doctor can work in different medical centers at the same time, so it is necessary to write down 2 different datas with 2 different medical_center id's;
 - vice versa one or many medical centers may or may not have one or many doctors in their databases;
 
-## Insert Script
+## Data Insertion. DML data load.
 At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
 - right click on table;
 - choosing option "import";
