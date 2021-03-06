@@ -192,4 +192,4 @@ At the data inserting process from excel to database tables we have used "Import
 ![ER Diagram](step_3.png)
 ![ER Diagram](step_4.png)
 ![ER Diagram](step_5.png)
-![ER Diagram](data_uploaded_screen.png.png)
+![ER Diagram](data_uploaded_screen.png)
