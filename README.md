@@ -193,3 +193,5 @@ At the data inserting process from excel to database tables we have used "Import
 ![ER Diagram](step_4.png)
 ![ER Diagram](step_5.png)
 ![ER Diagram](data_uploaded_screen.png)
+
+Also, have tried to use "insert script" to get the full queries of inserted data. Uploaded file (SmellsLikeTeamSpirit-DML-data-load.sql) at the same folder.
