@@ -163,4 +163,33 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
 The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
 
+## Data modeling and database design 
+![ER Diagram](SmellsLikeTeamSpirit-ER.png)
+We have used relations: one-to-many, many-to-many.
 
+There are 3 different types of relations in the database:
+- one-to-one
+- one-to-many
+- many-to-many
+
+But, since we have the closest links between the data of each table (getting the data from one table via foreign key from another table), there was no chance to use just one-to-one relations (for that moment exactly, at least).
+
+- one admin can edit many news or not;
+- one admin can add faq;
+- vice versa admin is able to do not add the data to faq;
+- one or many users can be on online consultation many times, and doctor can consult one or many users from many cities;
+- vice versa one or many users may have not been on consultation and doctor may have not been asked to present on consultation of one or many users;
+- one doctor can work in different medical centers at the same time, so it is necessary to write down 2 different datas with 2 different medical_center id's;
+- vice versa one or many medical centers may or may not have one or many doctors in their databases;
+
+## Insert Script
+At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
+- right click on table;
+- choosing option "import";
+- and then step by step actions, that we have represented here:
+![ER Diagram](step_1.png)
+![ER Diagram](step_2.png)
+![ER Diagram](step_3.png)
+![ER Diagram](step_4.png)
+![ER Diagram](step_5.png)
+![ER Diagram](data_uploaded_screen.png.png)
