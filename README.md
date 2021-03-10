@@ -197,4 +197,4 @@ At the data inserting process from excel to database tables we have used "Import
 Also, have tried to use "insert script" to get the full queries of inserted data. Uploaded file (SmellsLikeTeamSpirit-DML-data-load.sql) at the same folder.
 
 ## SQL queries
-All queries are available in queries [queries](https://github.com/E-CORONA/data/tree/main/queries) folder.
+All queries are available in [queries](https://github.com/E-CORONA/data/tree/main/queries) folder.
