@@ -56,7 +56,7 @@ Suppose, we have to delete user with id = 10123. Tables, where user_uid can be f
 7. How can we get list of consultations?
 8. How can we find phone numbers of patient knowing his first name and last name?
 9. How can we insert(register) new users?
-10. How can we track every changes(such as deleting, inserting, updating user) in user table (for admins)?
+10. What are the first names and city of user who asked a question on 2nd March on the topic of “Doctors”? (knowing that only one question was asked on that day)?
 11. What is the importance of the project?
 12. Who are the users of the website?
 13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
