@@ -61,7 +61,7 @@ Suppose, we have to delete user with id = 10123. Tables, where user_uid can be f
 12. How can we count number of medical consultations and PCR tests of one user in one query?
 13. How to get info about of medical centers near your home (name, full address, contacts) knowing only the name of street?
 14. What are name, address, contacts and test cost of PCR centers in Almaty where cost of one PCR test is less that 15 000 tenge?
-15. Are there any websites with similar services in Kazakhstan?
+15. Suppose, patient was registered to online consultation. How to recognize doctor's name,workplace and experience knowing only consultation id?
 
 ## Dataset for Project
 
