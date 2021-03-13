@@ -60,7 +60,7 @@ Suppose, we have to delete user with id = 10123. Tables, where user_uid can be f
 11. How can we display all questions and answers added by definite admin?
 12. How can we count number of medical consultations and PCR tests of one user in one query?
 13. How to get info about of medical centers near your home (name, full address, contacts) knowing only the name of street?
-14. How would this project ease the work of medical centers and doctors?
+14. What are name, address, contacts and test cost of PCR centers in Almaty where cost of one PCR test is less that 15 000 tenge?
 15. Are there any websites with similar services in Kazakhstan?
 
 ## Dataset for Project
