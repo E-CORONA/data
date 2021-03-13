@@ -58,7 +58,7 @@ Suppose, we have to delete user with id = 10123. Tables, where user_uid can be f
 9. How can we insert(register) new users?
 10. What are the first names and city of user who asked a question on 2nd March on the topic of “Doctors”? (knowing that only one question was asked on that day)?
 11. How can we display all questions and answers added by definite admin?
-12. How can we count number of all medical centers and PCR centers in Almaty separately in one query?
+12. How can we count number of medical consultations and PCR tests of one user in one query?
 13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
 14. How would this project ease the work of medical centers and doctors?
 15. Are there any websites with similar services in Kazakhstan?
