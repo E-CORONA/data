@@ -52,11 +52,11 @@ Database server: XAMPP.
 Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
 4. How can a user be added to consultation with a doctor?
 5. How can a user be added to PCR testing in a country's medical centers? 
-6. What are the main functions that a patient is allowed to do?
-7. What kind of information can users see about doctors?
-8. What kind of information can users see about medical centers?
-9. Where can the user display the list of tests and consultation he registered before?
-10. From how many modules does the project consist and what are them?
+6. How can we get list of users?
+7. How can we get list of consultations?
+8. How can we find phone numbers of patient?
+9. How can we insert(register) new users?
+10. How can we track every changes(such as deleting, inserting, updating user) in user table (for admins)?
 11. What is the importance of the project?
 12. Who are the users of the website?
 13. Generally, what kind of services the website suggests for doctors, medical centers and patients?
