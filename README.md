@@ -54,7 +54,7 @@ Suppose, we have to delete user with id = 10123. Tables, where user_uid can be f
 5. How can a user be added to PCR testing in a country's medical centers? 
 6. How can we get list of users?
 7. How can we get list of consultations?
-8. How can we find phone numbers of patient?
+8. How can we find phone numbers of patient knowing his first name and last name?
 9. How can we insert(register) new users?
 10. How can we track every changes(such as deleting, inserting, updating user) in user table (for admins)?
 11. What is the importance of the project?
