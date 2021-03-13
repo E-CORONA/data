@@ -46,11 +46,12 @@ Database server: XAMPP.
 
 ## General questions
 
-1. What is the general purpose of the project?
-2. Which type of information can retrieve any user(Patient,Admin,Institutions)?
-3. How can the patient be sure that he will be served by a highly qualified doctor?
-4. Is it possible to gather information to create infographics?
-5. How can patients get answers to general questions?
+1. What if a user wants to get the list of all medical Centers?
+2. What if a user wants to authorize from a non-email format?
+3. How can we delete user’s data from all tables at once?
+Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
+4. How can a user be added to consultation with a doctor?
+5. How can a user be added to PCR testing in a country's medical centers? 
 6. What are the main functions that a patient is allowed to do?
 7. What kind of information can users see about doctors?
 8. What kind of information can users see about medical centers?
