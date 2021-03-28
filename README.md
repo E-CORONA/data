@@ -262,7 +262,8 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
     with the theoretical part of knowledge about the coronavirus, which is very dangerous both in relation to this
     person and to everyone with whom he will have contact in case of misinformation. As for taking care of yourself
     after you have been sick or ill without any particular symptom - it is difficult to imagine how you would cope
-    with such a situation without the help and advice of specialists, rather than based on stories from relatives and friends.
+    with such a situation without the help and advice of specialists, rather than based on stories from relatives
+    and friends.
 
 </details>
 
