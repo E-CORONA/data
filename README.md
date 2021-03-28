@@ -1,6 +1,6 @@
 # E-Corona Project
 project description to the project for DBMS3.
-## Phase 2: Project description and data preparation 
+## Phase 2 : Project description and data preparation 
 <details>
   <summary>Project goal and its applications, benefits in real world.</summary>
   <p>Due to recent news, the consequences of which have affected not only our country but also the life cycle and economies of all countries in the world - the emergence of the highly dangerous Covid-19 virus - it has become very difficult to care for all patients at once. This is due not only to the fact that the number of medical personnel is insufficient to serve all patients over time but also to the fact that doctors have to work hard to serve and not get infected by the virus from a patient, as many still do not understand the seriousness of the disease. 
@@ -51,7 +51,7 @@ Front-end starter pack (HTML,CSS + Bootstrap 4);
 Database server: XAMPP.</p>
 </details>
 
-## Project Use-Case diagram and questions over the data 
+## Phase 3 : Project Use-Case diagram and questions over the data 
 <details>
   <summary>General questions</summary>
   
@@ -89,8 +89,7 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 ![doctor](doctorData.png)
 ![medCenter](medCenterData.png)
   </p>
-  <p>
-    ## Data Tables' Description
+## Data Tables' Description
 
 **Data about the medical centers:**
 - mcenter_id NUMBER(4) **primary key** - medical center’s identifier
@@ -172,7 +171,6 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 - city VARCHAR2(128) - city
 - punkt VARCHAR2(1024) - point
 - pcr_date VARCHAR2(256)) - pcr date
-  </p>
 </details>
 
 <details>
@@ -183,7 +181,7 @@ Reason why we have chosen to generate our own dataset - we want to make project 
   </p>
 </details>
 
-## Data modeling and database design.
+## Phase 4 : Data modeling and database design.
 <details>
   <summary>ER Diagram. </summary>
   <p>
