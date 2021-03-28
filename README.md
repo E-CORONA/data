@@ -55,8 +55,8 @@ Database server: XAMPP.</p>
 ## Project Use-Case diagram and questions over the data 
 <details>
   <summary>General questions</summary>
-1. What if a user wants to get the list of all medical Centers?
-2. What if a user wants to authorize from a non-email format?
+- 1. What if a user wants to get the list of all medical Centers?
+- 2. What if a user wants to authorize from a non-email format?
 3. How can we delete user’s data from all tables at once?
     Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
 4. How can a user be added to consultation with a doctor?
