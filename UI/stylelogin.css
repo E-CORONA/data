@@ -1,0 +1,37 @@
+.mainblock2 {
+	margin: 5vh 0vw;
+	display: flex;
+	justify-content: space-between;
+	color: white;
+}
+.loginside {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.ltext {
+	margin-top: 25px;
+	margin-bottom: -1px;
+	font-size: 14px !important;
+}
+
+.mainblock3 {
+	display: flex;
+	justify-content: center;
+	padding: 30px 0px;
+	color: #004FA8;
+	margin: 40px 0px;
+	width: 1200px;
+}
+.reg {
+	justify-content: center;
+	display: flex;
+	padding: 40px;
+	background-color: white;
+	border-radius: 5px;
+
+}
+.horizmargin {
+	margin:15px;
+}
