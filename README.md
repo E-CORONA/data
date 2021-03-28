@@ -247,6 +247,10 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 </details>
 <details>
   <summary>Display (or vizualize) the retrieved data to the users (or clients)</summary>
+  
+  **All user selection**
+  
+  ![6](https://user-images.githubusercontent.com/63196646/112758329-96921f80-900f-11eb-94e7-044759ca7188.png)
 
 
     There are many reasons why this topic for the project seemed more logical to us for implementation and analysis, 
