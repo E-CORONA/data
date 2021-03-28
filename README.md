@@ -117,66 +117,63 @@ Reason why we have chosen to generate our own dataset - we want to make project 
     - additional_inf VARCHAR2(100)- additional information on test accepting center
     - queues VARCHAR2(100) - information about queues to test
     - fax NUMBER(11) - the fax number of the test accepting center
+    **Data about the FAQ:**
+    - question_id NUMBER(4) **primary key** - questions’s identifier
+    - question VARCHAR2(1000)- the question which is frequently asked
+    - answer VARCHAR2(1000) - answer to the question
+    - admin_id NUMBER(2) **foreign key** - admin, who have edited FAQ
 
-**Data about the FAQ:**
-- question_id NUMBER(4) **primary key** - questions’s identifier
-- question VARCHAR2(1000)- the question which is frequently asked
-- answer VARCHAR2(1000) - answer to the question
-- admin_id NUMBER(2) **foreign key** - admin, who have edited FAQ
+    **Data about News:**
+    - topic VARCHAR2(500) - main topic
+    - thesis VARCHAR2(1000) - content data
+    - admin_id NUMBER(2) **foreign key** - admin id
+    - news_image BLOB - new's image
 
-**Data about News:**
-- topic VARCHAR2(500) - main topic
-- thesis VARCHAR2(1000) - content data
-- admin_id NUMBER(2) **foreign key** - admin id
-- news_image BLOB - new's image
+    **Data about Admins**
+    - first_name VARCHAR2(50) **primary key** - admin name
+    -last_name VARCHAR2(50) - admin surname
+    - email VARCHAR2(50) - contact email
+    - password VARCHAR2(20) - password
 
-**Data about Admins**
-- first_name VARCHAR2(50) **primary key** - admin name
--last_name VARCHAR2(50) - admin surname
-- email VARCHAR2(50) - contact email
-- password VARCHAR2(20) - password
+    **Data about Users:**
+    - user_uid NUMBER (5) NOT NULL **primary key** - user id
+    - first_name VARCHAR2 (50) - user name
+    - last_name VARCHAR2 (50) - user surname
+    - city VARCHAR2 (50) - user city
+    - contact_number NUMBER (11) - contact number
+    - email VARCHAR2 (50) - contact emil
+    - password VARCHAR2 (50) - password
+    - profile_image BLOB - user's image
 
-**Data about Users:**
-- user_uid NUMBER (5) NOT NULL **primary key** - user id
-- first_name VARCHAR2 (50) - user name
-- last_name VARCHAR2 (50) - user surname
-- city VARCHAR2 (50) - user city
-- contact_number NUMBER (11) - contact number
-- email VARCHAR2 (50) - contact emil
-- password VARCHAR2 (50) - password
-- profile_image BLOB - user's image
+    **Data about Online Consultation:**
+    - consultation_id NUMBER(5) **primary key** - record id
+    - user_uid NUMBER(5) **foreign key** - user id
+    - doctor_id NUMBER(5) **foreign key** - doctor id
+    - first_name VARCHAR2(26) - name
+    - last_name VARCHAR2(256) - surname
+    - age NUMBER(6) - age
+    - phone VARCHAR2(128) - contact number
+    - city VARCHAR2(128) - city
+    - doctor_name VARCHAR2(256) - doctor's name
+    - clinics VARCHAR2(1024) - medical institution
+    - consultation_date VARCHAR2(256)) - consultation date
 
-**Data about Online Consultation:**
-- consultation_id NUMBER(5) **primary key** - record id
-- user_uid NUMBER(5) **foreign key** - user id
-- doctor_id NUMBER(5) **foreign key** - doctor id
-- first_name VARCHAR2(26) - name
-- last_name VARCHAR2(256) - surname
-- age NUMBER(6) - age
-- phone VARCHAR2(128) - contact number
-- city VARCHAR2(128) - city
-- doctor_name VARCHAR2(256) - doctor's name
-- clinics VARCHAR2(1024) - medical institution
-- consultation_date VARCHAR2(256)) - consultation date
-
-**Data about Online PCR:**
-- pcr_id NUMBER(5) **primary key** - pcr record id
-- center_id NUMBER(4) **foreign key** - center id
-- user_uid NUMBER(5) **foreign key** - user id
-- first_name VARCHAR2(26) - name
-- last_name VARCHAR2(256) - surname
-- city VARCHAR2(128) - city
-- punkt VARCHAR2(1024) - point
-- pcr_date VARCHAR2(256)) - pcr date
-             
-## Data Tables' Description
+    **Data about Online PCR:**
+    - pcr_id NUMBER(5) **primary key** - pcr record id
+    - center_id NUMBER(4) **foreign key** - center id
+    - user_uid NUMBER(5) **foreign key** - user id
+    - first_name VARCHAR2(26) - name
+    - last_name VARCHAR2(256) - surname
+    - city VARCHAR2(128) - city
+    - punkt VARCHAR2(1024) - point
+    - pcr_date VARCHAR2(256)) - pcr date
 </details>
 
 <details>
   <summary>Functionalities and Features of the project</summary>
-  <p>
-    ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
-    The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
+
+![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
+  <p>The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
   </p>
 </details>
 
