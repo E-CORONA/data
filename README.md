@@ -1,22 +1,24 @@
 # E-Corona Project
 project description to the project for DBMS3.
-## Project goal and its applications, benefits in real world
+## Phase 2: Project description and data preparation 
 <details>
-  <summary>phase 2</summary>
+  <summary>Project goal and its applications, benefits in real world.</summary>
   <p>Due to recent news, the consequences of which have affected not only our country but also the life cycle and economies of all countries in the world - the emergence of the highly dangerous Covid-19 virus - it has become very difficult to care for all patients at once. This is due not only to the fact that the number of medical personnel is insufficient to serve all patients over time but also to the fact that doctors have to work hard to serve and not get infected by the virus from a patient, as many still do not understand the seriousness of the disease. 
 Our project proposes to solve this essentially the very serious problem with the help of online consultations with doctors, who will help those who are not seriously ill (i.e. asymptomatically, for example) or people who have already contracted the virus, maintain their health and make sure that they do not re-infected when the immunity of the infected person decreases.</p>
   <p>Website will enable people who are mildly ill, as well as those who have contracted the virus, to monitor their health online, without visiting doctors in hospitals, thus reducing the risk of falling ill again or infecting more healthy people who may be in their way. We have gathered the most experienced doctors, clinics, contacts, answers to frequently asked questions and want to make a unique platform for maintaining the health of our citizens into the Oracle database, also we have put together appropriate queries that will make it easier for visitors to the website to find the information they need quickly and conveniently.
 Key Terms: the convenience of finding the right information in one place, avoiding unnecessary physical contact, the position of starting online medical consultations, and using the Oracle database.</p>
 </details>
-
-## Scope of the project
-Collect all necessary data, parse it, implement all functions and procedures to properly operate with data.
+<details>
+  <summary>Scope of the project</summary>
+  <p>Collect all necessary data, parse it, implement all functions and procedures to properly operate with data.
 - Objectives: 
 Collect of medical centers in all cities of Kazakhstan
 Collect of infectious diseases doctors from each medical center
 Collect places to take the PCR test
 Processing frequently asked questions by searching among users
-Create an opportunity for the user to make an appointment online for an infectious diseases doctor, take a PCR test
+Create an opportunity for the user to make an appointment online for an infectious diseases doctor, take a PCR test.</p>
+</details>
+
 ## Type of the user-interface
 We have chosen a format of web application for our project. And to connect the interface with the database we are going to use PHP as a programming language. PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
 
