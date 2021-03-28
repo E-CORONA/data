@@ -77,7 +77,7 @@ Database server: XAMPP.</p>
 <details>
   <summary>Dataset for Project</summary>
   <p>
-    Let's move on to how we will insert data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
+Let's move on to how we will insert data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
 It helped us to think through the logic and development of the functionality - drawing up an ERD chart where we listed the name of the tables, the logic through which they are linked to each other (foreign key), and how they can play into our hands in sorting the necessary information when searching.
 
 **Link for ERD in the data repository of the organization:** https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
@@ -179,10 +179,11 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 
 ## Phase 4 : Data modeling and database design.
 <details>
-  <summary>ER Diagram. </summary>
-  <p>
-    ![ER Diagram](SmellsLikeTeamSpirit-ER.png) We have used relations: one-to-many, many-to-many.
-    There are 3 different types of relations in the database:
+  <summary>ER Diagram. DDL queries.</summary>
+
+![ER Diagram](SmellsLikeTeamSpirit-ER.png) We have used relations: one-to-many, many-to-many.
+    
+<p>There are 3 different types of relations in the database:
 - one-to-one
 - one-to-many
 - many-to-many
@@ -201,8 +202,8 @@ But, since we have the closest links between the data of each table (getting the
 
 <details>
   <summary>Data Insertion. DML data load.</summary>
-  <p>
-    At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
+
+At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
 - right click on table;
 - choosing option "import";
 - and then step by step actions, that we have represented here:
@@ -212,13 +213,17 @@ But, since we have the closest links between the data of each table (getting the
 ![ER Diagram](step_4.png)
 ![ER Diagram](step_5.png)
 ![ER Diagram](data_uploaded_screen.png)
-
+<p>
 Also, have tried to use "insert script" to get the full queries of inserted data. Uploaded file (SmellsLikeTeamSpirit-DML-data-load.sql) at the same folder.
   </p>
 </details>
 
-## SQL queries
+## Phase 5 : SQL queries
+<details>
+  <summary>Link for queries</summary>
+
 All queries are available in [queries](https://github.com/E-CORONA/data/tree/main/queries) folder.
+</details>
 
 ##  User-interface implementation and connection 
 <details>
