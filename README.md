@@ -25,7 +25,6 @@ Create an opportunity for the user to make an appointment online for an infectio
 </details>
 <details>
   <summary>Programming Language and database server</summary>
-    Markup : -------------------
   <p>Methods: 
 To start with, we used PHP to develop the backend side of the website.
 A quick overview: PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
@@ -53,28 +52,33 @@ Front-end starter pack (HTML,CSS + Bootstrap 4);
 Database server: XAMPP.</p>
 </details>
 
-## General questions
+## Project Use-Case diagram and questions over the data 
+<details>
+  <summary></summary>
+  <p>
+    1. What if a user wants to get the list of all medical Centers?
+    2. What if a user wants to authorize from a non-email format?
+    3. How can we delete user’s data from all tables at once?
+    Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
+    4. How can a user be added to consultation with a doctor?
+    5. How can a user be added to PCR testing in a country's medical centers? 
+    6. How can we get list of users?
+    7. How can we get list of consultations?
+    8. How can we find phone numbers of patient knowing his first name and last name?
+    9. How can we insert(register) new users?
+    10. What are the first names and city of user who asked a question on 2nd March on the topic of “Doctors”? (knowing that only one question was asked on that day)?
+    11. How can we display all questions and answers added by definite admin?
+    12. How can we count number of medical consultations and PCR tests of one user in one query?
+    13. How to get info about of medical centers near your home (name, full address, contacts) knowing only the name of street?
+    14. What are name, address, contacts and test cost of PCR centers in Almaty where cost of one PCR test is less that 15 000 tenge?
+    15. Suppose, patient was registered to online consultation. How to recognize doctor's name,workplace and experience knowing only consultation id?
+  </p>
+</details>
 
-1. What if a user wants to get the list of all medical Centers?
-2. What if a user wants to authorize from a non-email format?
-3. How can we delete user’s data from all tables at once?
-Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
-4. How can a user be added to consultation with a doctor?
-5. How can a user be added to PCR testing in a country's medical centers? 
-6. How can we get list of users?
-7. How can we get list of consultations?
-8. How can we find phone numbers of patient knowing his first name and last name?
-9. How can we insert(register) new users?
-10. What are the first names and city of user who asked a question on 2nd March on the topic of “Doctors”? (knowing that only one question was asked on that day)?
-11. How can we display all questions and answers added by definite admin?
-12. How can we count number of medical consultations and PCR tests of one user in one query?
-13. How to get info about of medical centers near your home (name, full address, contacts) knowing only the name of street?
-14. What are name, address, contacts and test cost of PCR centers in Almaty where cost of one PCR test is less that 15 000 tenge?
-15. Suppose, patient was registered to online consultation. How to recognize doctor's name,workplace and experience knowing only consultation id?
-
-## Dataset for Project
-
-Let's move on to how we will insert data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
+<details>
+  <summary>Dataset for Project</summary>
+  <p>
+    Let's move on to how we will insert data into tables. It's simple, in SQL developer 19 version, there is a built-in function called import, through which we were able to select our own .xslx file with data and import it into tables. After our table was created, we manually set sequence, primary and foreign keys.
 It helped us to think through the logic and development of the functionality - drawing up an ERD chart where we listed the name of the tables, the logic through which they are linked to each other (foreign key), and how they can play into our hands in sorting the necessary information when searching.
 
 **Link for ERD in the data repository of the organization:** https://drive.google.com/file/d/15FY00Wvso8Xn8z0YphSSC8LoMxXv4kQP/view
@@ -85,8 +89,9 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 ![users](userData.png)
 ![doctor](doctorData.png)
 ![medCenter](medCenterData.png)
-
-## Data Tables' Description
+  </p>
+  <p>
+    ## Data Tables' Description
 
 **Data about the medical centers:**
 - mcenter_id NUMBER(4) **primary key** - medical center’s identifier
@@ -168,16 +173,23 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 - city VARCHAR2(128) - city
 - punkt VARCHAR2(1024) - point
 - pcr_date VARCHAR2(256)) - pcr date
+  </p>
+</details>
 
-##  Functionalities and Features of the project
-![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
-The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
+<details>
+  <summary>Functionalities and Features of the project</summary>
+  <p>
+    ![Use-Case Diagram](SmellsLikeTeamSpirit-UseCase-UML.png)
+    The E-Corona platform allows a physician to remotely analyze medical records and identify a patient into one of the rehabilitation groups of patients with common problems. Professional rehabilitation instructors then conduct group physical therapy programs, group and individual psychotherapy sessions, art and occupational therapy to correct neurological and mental disorders in a remote mode. Also, the platform provides registration for PCR test, with the ability to find a link to the online record in the right-center, in the right city without unnecessary search, because if you choose correctly, the platform will provide the necessary links to the PCR test in seconds.
+  </p>
+</details>
 
-## Data modeling and database design. ER Diagram.
-![ER Diagram](SmellsLikeTeamSpirit-ER.png)
-We have used relations: one-to-many, many-to-many.
-
-There are 3 different types of relations in the database:
+## Data modeling and database design.
+<details>
+  <summary>ER Diagram. </summary>
+  <p>
+    ![ER Diagram](SmellsLikeTeamSpirit-ER.png) We have used relations: one-to-many, many-to-many.
+    There are 3 different types of relations in the database:
 - one-to-one
 - one-to-many
 - many-to-many
@@ -191,9 +203,13 @@ But, since we have the closest links between the data of each table (getting the
 - vice versa one or many users may have not been on consultation and doctor may have not been asked to present on consultation of one or many users;
 - one doctor can work in different medical centers at the same time, so it is necessary to write down 2 different datas with 2 different medical_center id's;
 - vice versa one or many medical centers may or may not have one or many doctors in their databases;
+  </p>
+</details>
 
-## Data Insertion. DML data load.
-At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
+<details>
+  <summary>Data Insertion. DML data load.</summary>
+  <p>
+    At the data inserting process from excel to database tables we have used "Import" function in SQL Developer:
 - right click on table;
 - choosing option "import";
 - and then step by step actions, that we have represented here:
@@ -205,6 +221,8 @@ At the data inserting process from excel to database tables we have used "Import
 ![ER Diagram](data_uploaded_screen.png)
 
 Also, have tried to use "insert script" to get the full queries of inserted data. Uploaded file (SmellsLikeTeamSpirit-DML-data-load.sql) at the same folder.
+  </p>
+</details>
 
 ## SQL queries
 All queries are available in [queries](https://github.com/E-CORONA/data/tree/main/queries) folder.
