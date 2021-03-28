@@ -18,12 +18,15 @@ Collect places to take the PCR test
 Processing frequently asked questions by searching among users
 Create an opportunity for the user to make an appointment online for an infectious diseases doctor, take a PCR test.</p>
 </details>
-
-## Type of the user-interface
-We have chosen a format of web application for our project. And to connect the interface with the database we are going to use PHP as a programming language. PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
-
-## Programming Language and database server
-Methods: 
+<details>
+  <summary>Type of the user-interface</summary>
+    Markup : -------------------
+  <p>We have chosen a format of web application for our project. And to connect the interface with the database we are going to use PHP as a programming language. PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.</p>
+</details>
+<details>
+  <summary>Programming Language and database server</summary>
+    Markup : -------------------
+  <p>Methods: 
 To start with, we used PHP to develop the backend side of the website.
 A quick overview: PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.
 Even though connecting PHP to Oracle did not seem so complicated, we were somewhat puzzled by the discrepancy between our database version and the XAMPP version of the database. 
@@ -47,7 +50,8 @@ oci_close($conn);
 ```
 PHP - backend;
 Front-end starter pack (HTML,CSS + Bootstrap 4);
-Database server: XAMPP.
+Database server: XAMPP.</p>
+</details>
 
 ## General questions
 
