@@ -89,37 +89,34 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 ![doctor](doctorData.png)
 ![medCenter](medCenterData.png)
   </p>
-## Data Tables' Description
-
-**Data about the medical centers:**
-- mcenter_id NUMBER(4) **primary key** - medical center’s identifier
-- mcenter_name VARCHAR2(100) - medical center’s name
-- city VARCHAR2(50) - the city where the medical center locates
-- address VARCHAR2(100) - address of the medical center
-- contacts NUMBER(11) - the contact number of the medical center
-
-**Data about the doctors:**
-- doctor_id NUMBER(5) **primary key** - doctor’s identifier
-- doctor_name VARCHAR2(100) - doctor’s full name
-- speciality VARCHAR2(100) - the field on which doctor specializes 
-- experience NUMBER(2) - number of years on work
-- home_visits BOOLEAN - if the doctor accepts the patients at home
-- accepts_children BOOLEAN - if the doctor accepts the children in therapies
-- initial_reception NUMBER(6) - the price for very first therapy
-- secondary_reception NUMBER(6) - the price for therapy
-- mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor works
-
-**Data about the PCR:**
-- center_id NUMBER(4) **primary key** - test accepting center’s identifier
-- city VARCHAR2(50) - the city where test accepting center locates
-- center_name VARCHAR2(100) - test accepting center’s name
-- address VARCHAR(100) - address of the test accepting center
-- cost NUMBER(6) - cost of the test
-- webpage VARCHAR2(100) - web page of test accepting center
-- contacts NUMBER(11) -  the contact number of the test accepting center 
-- additional_inf VARCHAR2(100)- additional information on test accepting center
-- queues VARCHAR2(100) - information about queues to test
-- fax NUMBER(11) - the fax number of the test accepting center
+  
+    **Data about the medical centers:**
+    - mcenter_id NUMBER(4) **primary key** - medical center’s identifier
+    - mcenter_name VARCHAR2(100) - medical center’s name
+    - city VARCHAR2(50) - the city where the medical center locates
+    - address VARCHAR2(100) - address of the medical center
+    - contacts NUMBER(11) - the contact number of the medical center
+    **Data about the doctors:**
+    - doctor_id NUMBER(5) **primary key** - doctor’s identifier
+    - doctor_name VARCHAR2(100) - doctor’s full name
+    - speciality VARCHAR2(100) - the field on which doctor specializes 
+    - experience NUMBER(2) - number of years on work
+    - home_visits BOOLEAN - if the doctor accepts the patients at home
+    - accepts_children BOOLEAN - if the doctor accepts the children in therapies
+    - initial_reception NUMBER(6) - the price for very first therapy
+    - secondary_reception NUMBER(6) - the price for therapy
+    - mcenter_id NUMBER(4) **foreign key** - identifier of medical center where doctor works
+    **Data about the PCR:**
+    - center_id NUMBER(4) **primary key** - test accepting center’s identifier
+    - city VARCHAR2(50) - the city where test accepting center locates
+    - center_name VARCHAR2(100) - test accepting center’s name
+    - address VARCHAR(100) - address of the test accepting center
+    - cost NUMBER(6) - cost of the test
+    - webpage VARCHAR2(100) - web page of test accepting center
+    - contacts NUMBER(11) -  the contact number of the test accepting center 
+    - additional_inf VARCHAR2(100)- additional information on test accepting center
+    - queues VARCHAR2(100) - information about queues to test
+    - fax NUMBER(11) - the fax number of the test accepting center
 
 **Data about the FAQ:**
 - question_id NUMBER(4) **primary key** - questions’s identifier
@@ -171,6 +168,8 @@ Reason why we have chosen to generate our own dataset - we want to make project 
 - city VARCHAR2(128) - city
 - punkt VARCHAR2(1024) - point
 - pcr_date VARCHAR2(256)) - pcr date
+             
+## Data Tables' Description
 </details>
 
 <details>
