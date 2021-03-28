@@ -20,7 +20,6 @@ Create an opportunity for the user to make an appointment online for an infectio
 </details>
 <details>
   <summary>Type of the user-interface</summary>
-    Markup : -------------------
   <p>We have chosen a format of web application for our project. And to connect the interface with the database we are going to use PHP as a programming language. PHP uses the standard Oracle functions (ORA) and the interface to access Oracle functions (OCI), which makes it possible to use all the features of Oracle, including PL/SQL.</p>
 </details>
 <details>
@@ -55,8 +54,9 @@ Database server: XAMPP.</p>
 ## Project Use-Case diagram and questions over the data 
 <details>
   <summary>General questions</summary>
-- 1. What if a user wants to get the list of all medical Centers?
-- 2. What if a user wants to authorize from a non-email format?
+~~~  
+1. What if a user wants to get the list of all medical Centers?
+2. What if a user wants to authorize from a non-email format?
 3. How can we delete user’s data from all tables at once?
     Suppose, we have to delete user with id = 10123. Tables, where user_uid can be found: eco_users, online_consultation, online_pcr.
 4. How can a user be added to consultation with a doctor?
@@ -71,6 +71,7 @@ Database server: XAMPP.</p>
 13. How to get info about of medical centers near your home (name, full address, contacts) knowing only the name of street?
 14. What are name, address, contacts and test cost of PCR centers in Almaty where cost of one PCR test is less that 15 000 tenge?
 15. Suppose, patient was registered to online consultation. How to recognize doctor's name,workplace and experience knowing only consultation id?
+~~~
 </details>
 
 <details>
