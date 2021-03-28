@@ -254,5 +254,7 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
     we are working on is relevant to the population.
   
 [Link for responses and data collected](https://docs.google.com/spreadsheets/d/1YsA53Bu3LX_XLowugBjd5CJlRYzsj_NnvpWKkGmVC50/edit?usp=sharing)
-
+![Data Collected](data_collectted.png)
 </details>
+
+
