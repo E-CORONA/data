@@ -231,9 +231,19 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 </details>
 <details>
   <summary>Establishing the connection with created database</summary>
+  
+  ![conn](https://user-images.githubusercontent.com/63196646/112757539-ee2e8c00-900b-11eb-9b49-c198afb0aa8e.png)
+
+
 </details>
 <details>
   <summary>Project functions that will trigger corresponding SQL queries to retrieve the necessary data</summary>
+  
+  ![1](https://user-images.githubusercontent.com/63196646/112757437-9a23a780-900b-11eb-8c7c-9573c6f1ccf1.png)
+  ![2](https://user-images.githubusercontent.com/63196646/112757441-9bed6b00-900b-11eb-8e43-71d8fd2917cc.png)
+  ![3](https://user-images.githubusercontent.com/63196646/112757449-9ee85b80-900b-11eb-8e85-6853e7b3f81f.png)
+  ![4](https://user-images.githubusercontent.com/63196646/112757452-a14ab580-900b-11eb-877f-21bd39366341.png)
+
 </details>
 <details>
   <summary>Display (or vizualize) the retrieved data to the users (or clients)</summary>
