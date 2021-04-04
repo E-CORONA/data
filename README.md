@@ -284,9 +284,13 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 ##  Phase 7 :  SQL to Relational Algebra (RA) operators 
 <details>
   <summary>Picked SQL queries</summary>
+  3. SELECT eco_users.user_uid, online_consultation.consultation_id, online_pcr.pcr_id FROM eco_users 
+      JOIN online_consultation ON(eco_users.user_uid = online_consultation.user_uid) 
+      JOIN online_pcr on(eco_users.user_uid = online_pcr.user_uid);
+  13. SELECT mcenter_name, address, contacts FROM medical_center WHERE address LIKE '%Manasa%' AND city = 'Almaty'; 
 </details>
 <details>
   <summary>Link for RA operators in the project</summary>
-  [SQL to Relational Algebra (RA) operators](https://github.com/E-CORONA/data/)
+  [https://github.com/E-CORONA/data/tree/main/RA%20queries](SQL to Relational Algebra (RA) operators)
 
 </details>
