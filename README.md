@@ -291,6 +291,6 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 </details>
 <details>
   <summary>Link for RA operators in the project</summary>
-  [https://github.com/E-CORONA/data/tree/main/RA%20queries] (SQL to Relational Algebra (RA) operators)
+  [SQL to Relational Algebra (RA) operators](https://github.com/E-CORONA/data/tree/main/RA%20queries)
 
 </details>
