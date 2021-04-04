@@ -1,5 +1,5 @@
 # E-Corona Project
-project description to the project for DBMS3.
+project description CSS 348 - Advanced Database Management Systems
 ## Phase 2 : Project description and data preparation 
 <details>
   <summary>Project goal and its applications, benefits in real world.</summary>
@@ -281,4 +281,12 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 
 </details>
 
+##  Phase 7 :  SQL to Relational Algebra (RA) operators 
+<details>
+  <summary>Picked SQL queries</summary>
+</details>
+<details>
+  <summary>Link for RA operators in the project</summary>
+  [SQL to Relational Algebra (RA) operators](https://github.com/E-CORONA/data/)
 
+</details>
