@@ -1,1 +1,34 @@
+// Original query
+SELECT eco_users.user_uid, online_consultation.consultation_id, online_pcr.pcr_id FROM eco_users
+JOIN online_consultation ON(eco_users.user_uid = online_consultation.user_uid)
+JOIN online_pcr on(eco_users.user_uid = online_pcr.user_uid);
+//---------------------------------------------------------------------------------
+
+// --1 form
+SELECT count(*) from online_pcr join (online_consultation join eco_users on eco_users.user_uid = online_consultation.user_uid) on eco_users.user_uid = online_pcr.user_uid;
+
+
+// --2 form
+SELECT count(*) from online_consultation join (online_pcr join eco_users on eco_users.user_uid = online_pcr.user_uid) on eco_users.user_uid = online_consultation.user_uid;
+
+
+// --3 form
+SELECT count(*) from eco_users join (online_consultation join online_pcr) on eco_users.user_uid = online_consultation.user_uid AND eco_users.user_uid = online_pcr.user_uid;
+
+//-------------------------------------------------------------------------------
+
+// -- sub-query for from 1
+select count(*) from online_consultation, eco_users where eco_users.user_uid = online_consultation.user_uid;
+(online_consultation ⋈ eco_users) ⋈ online_pcr 7
+
+
+// -- sub-query for from 2
+select count(*) from online_pcr, eco_users where eco_users.user_uid = online_pcr.user_uid;
+(online_pcr ⋈ eco_users) ⋈ online_consultation 8
+
+
+// -- sub-query for from 3
+select count(*) from online_consultation, online_pcr where online_consultation.user_uid = online_pcr.user_uid;
+(online_consultation ⋈ online_pcr) ⋈ eco_users 0
+
 
