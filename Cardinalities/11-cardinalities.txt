@@ -1,0 +1,29 @@
+// Original query
+select a.admin_id, a.first_name, a.last_name, n.topic, f.question_id from admins a, news n, faq f 
+where a.admin_id = 10 and a.admin_id = n.admin_id and a.admin_id = f.admin_id;
+//---------------------------------------------------------------------------------
+
+// --1 form
+select count(*) from admin join (news join faq) on admin.admin_id = news.admin_id and admin.admin_id = faq.admin_id and admin.admin_id = 10;
+
+// --2 form
+select count(*) from news join (admin join faq on admin.admin_id = faq.admin_id) on admin.admin_id = news.admin_id and admin.admin_id = 10;
+
+
+// --3 form
+select count(*) from faq join (admin join news on admin.admin_id = news.admin_id) on admin.admin_id = faq.admin_id and admin.admin_id = 10;
+//-------------------------------------------------------------------------------
+
+// -- sub-query for from 1
+select count(*) from news, faq; -- 91
+(news ⋈ faq) ⋈ admin 91
+
+
+// -- sub-query for from 2
+select count(*) from admin, faq WHERE admin.admin_id = faq.admin_id and admin.admin_id = 10;
+(news ⋈ faq) ⋈ admin 6
+
+
+// -- sub-query for from 3
+select count(*) from admin, news WHERE admin.admin_id = news.admin_id and admin.admin_id = 10;
+(news ⋈ faq) ⋈ admin 4
