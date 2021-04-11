@@ -1,0 +1,40 @@
+// Original query
+"SELECT c.consultation_id, d.doctor_id, m.mcenter_id, m.mcenter_name from online_consultation c, doctors d, medical_center m where c.doctor_id = d.doctor_id and m.mcenter_id = d. mcenter_id and c.consultation_id  = 9001;";
+//---------------------------------------------------------------------------------
+
+// --1 form
+"SELECT COUNT(*)
+FROM online_consultation c
+JOIN (doctors d JOIN medical_center m ON m.mcenter_id = d. mcenter_id) 
+ON c.doctor_id = d.doctor_id AND c.consultation_id = 9001;";
+
+// --2 form
+"SELECT COUNT(*)
+FROM doctors d
+JOIN (online_consultation c JOIN medical_center m ON c.consultation_id = 9001;) 
+ON c.doctor_id = d.doctor_id AND m.mcenter_id = d. mcenter_id";
+
+// --3 form
+"SELECT COUNT(*)
+FROM medical_center m
+JOIN (doctors d JOIN online_consultation c ON c.doctor_id = d.doctor_id AND c.consultation_id = 9001) 
+ON m.mcenter_id = d. mcenter_id";
+//-------------------------------------------------------------------------------
+
+// -- sub-query for from 1
+"SELECT COUNT(*)
+FROM doctors d, medical_center m
+WHERE m.mcenter_id = d. mcenter_id;
+";
+
+// -- sub-query for from 2
+"SELECT COUNT(*)
+FROM online_consultation c, medical_center m
+WHERE c.consultation_id = 9001;
+";
+
+// -- sub-query for from 3
+"SELECT COUNT(*)
+FROM doctors d, online_consultation c
+WHERE c.doctor_id = d.doctor_id AND c.consultation_id = 9001;
+";
