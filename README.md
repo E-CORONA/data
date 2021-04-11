@@ -297,3 +297,11 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
  [SQL to Relational Algebra (RA) operators](https://github.com/E-CORONA/data/tree/main/RA%20queries)
 
 </details>
+
+##  Phase 8 :  Calculating true cardinalities and plan evaluation
+<details>
+  <summary>Link for cardinalities</summary>
+ 
+ [Calculating true cardinalities and plan evaluation](https://github.com/E-CORONA/data/tree/main/Cardinalities)
+
+</details>
