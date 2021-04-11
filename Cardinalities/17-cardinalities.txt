@@ -11,7 +11,7 @@ ON c.doctor_id = d.doctor_id AND c.consultation_id = 9001;
 // --2 form
 SELECT COUNT(*)
 FROM doctors d
-JOIN (online_consultation c JOIN medical_center m ON c.consultation_id = 9001;) 
+JOIN (online_consultation c JOIN medical_center m ON c.consultation_id = 9001) 
 ON c.doctor_id = d.doctor_id AND m.mcenter_id = d. mcenter_id;
 
 // --3 form
