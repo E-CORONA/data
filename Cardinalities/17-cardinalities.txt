@@ -26,15 +26,18 @@ SELECT COUNT(*)
 FROM doctors d, medical_center m
 WHERE m.mcenter_id = d. mcenter_id;
 
+(doctors ⋈ medical_center) ⋈ online_consultation 84
 
 // -- sub-query for from 2
 SELECT COUNT(*)
 FROM online_consultation c, medical_center m
 WHERE c.consultation_id = 9001;
 
+(online_consultation ⋈ medical_center) ⋈ doctors 63
 
 // -- sub-query for from 3
 SELECT COUNT(*)
 FROM doctors d, online_consultation c
 WHERE c.doctor_id = d.doctor_id AND c.consultation_id = 9001;
 
+(doctors ⋈ online_consultation) ⋈ medical_center 2
