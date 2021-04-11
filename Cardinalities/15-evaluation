@@ -1,0 +1,42 @@
+SELECT u.first_name, u.last_name, c.consultation_date, d.doctor_name, d.experience FROM doctors d, eco_users u , online_consultation c WHERE u.user_id = c.user_id AND c.doctor_id =d.doctor_id AND c.consultation_id = 9002;
+//---------------------------------------------------------------------------------
+
+// --1 form
+SELECT COUNT(*)
+FROM doctors d
+JOIN (eco_users u JOIN online_consultation c ON u.user_uid = c.user_id AND c.consultation_id = 9002) 
+ON c.doctor_id =d.doctor_id;
+
+// --2 form
+SELECT COUNT(*)
+FROM eco_users u
+JOIN (doctors d JOIN online_consultation c ON c.doctor_id =d.doctor_id AND c.consultation_id = 9002) 
+ON u.user_id = c.user_id;
+
+// --3 form
+SELECT COUNT(*)
+FROM online_consultation c
+JOIN (doctors d JOIN eco_users u) 
+ON u.user_uid = c.user_uid AND c.doctor_id =d.doctor_id AND c.consultation_id = 9002;
+//-------------------------------------------------------------------------------
+
+// -- sub-query for from 1
+SELECT COUNT(*)
+FROM eco_users u, online_consultation c
+WHEREu.user_uid = c.user_uid AND c.consultation_id = 9002;
+
+
+(eco_users ⋈ online_consultation) ⋈ doctors 2
+
+// -- sub-query for from 2
+SELECT COUNT(*)
+FROM doctors d, online_consultation c
+WHERE c.doctor_id =d.doctor_id AND c.consultation_id = 9002;
+
+(doctors ⋈ online_consultation) ⋈ eco_users 2
+
+// -- sub-query for from 3
+SELECT COUNT(*)
+FROM doctors d, eco_users u;
+
+(doctors ⋈ eco_users) ⋈ online_consultation 14194
