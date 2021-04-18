@@ -305,3 +305,75 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
  [Calculating true cardinalities and plan evaluation](https://github.com/E-CORONA/data/tree/main/Cardinalities)
 
 </details>
+
+##  Phase 9 :  Speed performance evaluation
+<details>
+  <summary>List of queries with runtime</summary>
+  - SELECT eco_users.user_uid, online_consultation.consultation_id, online_pcr.pcr_id FROM eco_users
+    JOIN online_consultation ON(eco_users.user_uid = online_consultation.user_uid)
+    JOIN online_pcr on(eco_users.user_uid = online_pcr.user_uid);
+    TIME FOR testQuery: 0.0005452632904052734 seconds
+    TIME FOR testQuery: 0.00042724609375 seconds
+    TIME FOR testQuery: 0.00039196014404296875 seconds
+    TIME FOR testQuery: 0.0005781650543212891 seconds
+    TIME FOR testQuery: 0.0004143714904785156 seconds
+    avg TIME: 0.00047140121 seconds
+  - SELECT u.firstname, u.lastname, c.consultation_date, d.doctor_name, d.experience FROM doctors d, eco_users u , online_consultation c WHERE u.user_uid =       c.user_uid AND c.doctor_id =d.doctor_id AND c.consultation_id = 9002;
+    TIME FOR testQuery: 0.0005364418029785156 seconds
+    TIME FOR testQuery: 0.0005180835723876953 seconds
+    TIME FOR testQuery: 0.0005576610565185547 seconds
+    TIME FOR testQuery: 0.0006499290466308594 seconds
+    TIME FOR testQuery: 0.0006685256958007812 seconds
+    avg TIME: 0.00058612823 seconds
+  - SELECT c.consultation_id, d.doctor_id, m.mcenter_id, m.mcenter_name from online_consultation c, doctors d, medical_center m where c.doctor_id = d.doctor_id       and m.mcenter_id = d. mcenter_id and c.consultation_id  = 9001;
+    TIME FOR testQuery: 0.0004703998565673828 seconds
+    TIME FOR testQuery: 0.0004608631134033203 seconds
+    TIME FOR testQuery: 0.00047779083251953125 seconds
+    TIME FOR testQuery: 0.0004405975341796875 seconds
+    TIME FOR testQuery: 0.0004611015319824219 seconds
+    avg TIME: 0.00046215057 seconds
+  - SELECT a.admin_id, a.first_name, a.last_name, n.topic, f.queastion_id from admin a, news n, faq f 
+    where a.admin_id = 10 and a.admin_id = n.admin_id and a.admin_id = f.admin_id;
+    TIME FOR testQuery: 0.0005314350128173828 seconds
+    TIME FOR testQuery: 0.0006225109100341797 seconds
+    TIME FOR testQuery: 0.0004451274871826172 seconds
+    TIME FOR testQuery: 0.0004673004150390625 seconds
+    TIME FOR testQuery: 0.0005745887756347656 seconds
+    avg TIME: 0.00052819252 seconds
+  - SELECT question, answer FROM faq where admin_id = 12;
+    TIME FOR testQuery: 0.00037860870361328125 seconds
+    TIME FOR testQuery: 0.0002434253692626953 seconds
+    TIME FOR testQuery: 0.0002951622009277344 seconds
+    TIME FOR testQuery: 0.0003142356872558594 seconds
+    TIME FOR testQuery: 0.00033211708068847656 seconds
+    avg TIME: 0.0003127098 seconds
+  - SELECT mcenter_name, address, contacts FROM medical_center WHERE address LIKE '%Manasa%' AND city = 'Almaty';
+    TIME FOR testQuery: 0.0003895759582519531 seconds
+    TIME FOR testQuery: 0.00028634071350097656 seconds
+    TIME FOR testQuery: 0.0003104209899902344 seconds
+    TIME FOR testQuery: 0.000385284423828125 seconds
+    TIME FOR testQuery: 0.0004875659942626953 seconds
+    avg TIME: 0.00037183761 seconds
+  - SELECT center_name, address, contacts, cost FROM pcr WHERE cost < 15000;
+    TIME FOR testQuery: 0.0004925727844238281 seconds
+    TIME FOR testQuery: 0.0005543231964111328 seconds
+    TIME FOR testQuery: 0.00048279762268066406 seconds
+    TIME FOR testQuery: 0.0005033016204833984 seconds
+    TIME FOR testQuery: 0.0005283355712890625 seconds
+    avg TIME: 0.00051226615 seconds
+  - SELECT doctor_name, mcenter_id, experience FROM DOCTORS where DOCTOR_ID = (SELECT doctor_id FROM online_consultation where consultation_id = 9001);
+    TIME FOR testQuery: 0.00027823448181152344 seconds
+    TIME FOR testQuery: 0.0004074573516845703 seconds
+    TIME FOR testQuery: 0.0004048347473144531 seconds
+    TIME FOR testQuery: 0.00027680397033691406 seconds
+    TIME FOR testQuery: 0.0002918243408203125 seconds
+    avg TIME: 0.00033183097 seconds
+  - SELECT contact_number FROM eco_users WHERE first_name = 'Serik' AND last_name = 'Daniyarev';
+    TIME FOR testQuery: 0.00023174285888671875 seconds
+    TIME FOR testQuery: 0.00023627281188964844 seconds
+    TIME FOR testQuery: 0.00022459030151367188 seconds
+    TIME FOR testQuery: 0.00023293495178222656 seconds
+    TIME FOR testQuery: 0.0002751350402832031 seconds
+    avg TIME: 0.00024013519 seconds
+
+</details>
