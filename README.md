@@ -310,7 +310,6 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
 <details>
   <summary>List of queries with runtime</summary>
   
-  
   - SELECT eco_users.user_uid, online_consultation.consultation_id, online_pcr.pcr_id FROM eco_users
     JOIN online_consultation ON(eco_users.user_uid = online_consultation.user_uid)
     JOIN online_pcr on(eco_users.user_uid = online_pcr.user_uid);
@@ -322,7 +321,7 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
         TIME FOR testQuery: 0.0004143714904785156 seconds
 
         avg TIME: 0.00047140121 seconds
-    
+      
   - SELECT u.firstname, u.lastname, c.consultation_date, d.doctor_name, d.experience FROM doctors d, eco_users u , online_consultation c WHERE u.user_uid =       c.user_uid AND c.doctor_id =d.doctor_id AND c.consultation_id = 9002;
   
         TIME FOR testQuery: 0.0005364418029785156 seconds        
