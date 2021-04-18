@@ -352,36 +352,6 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
         TIME FOR testQuery: 0.0005745887756347656 seconds
         
         avg TIME: 0.00052819252 seconds
-    
-  - SELECT question, answer FROM faq where admin_id = 12;
-  
-        TIME FOR testQuery: 0.00037860870361328125 seconds
-        TIME FOR testQuery: 0.0002434253692626953 seconds
-        TIME FOR testQuery: 0.0002951622009277344 seconds
-        TIME FOR testQuery: 0.0003142356872558594 seconds
-        TIME FOR testQuery: 0.00033211708068847656 seconds
-        
-        avg TIME: 0.0003127098 seconds
-        
-  - SELECT mcenter_name, address, contacts FROM medical_center WHERE address LIKE '%Manasa%' AND city = 'Almaty';
-  
-        TIME FOR testQuery: 0.0003895759582519531 seconds
-        TIME FOR testQuery: 0.00028634071350097656 seconds
-        TIME FOR testQuery: 0.0003104209899902344 seconds
-        TIME FOR testQuery: 0.000385284423828125 seconds
-        TIME FOR testQuery: 0.0004875659942626953 seconds
-        
-        avg TIME: 0.00037183761 seconds
-        
-  - SELECT center_name, address, contacts, cost FROM pcr WHERE cost < 15000;
-
-        TIME FOR testQuery: 0.0004925727844238281 seconds
-        TIME FOR testQuery: 0.0005543231964111328 seconds
-        TIME FOR testQuery: 0.00048279762268066406 seconds
-        TIME FOR testQuery: 0.0005033016204833984 seconds
-        TIME FOR testQuery: 0.0005283355712890625 seconds
-        
-        avg TIME: 0.00051226615 seconds
         
   - SELECT doctor_name, mcenter_id, experience FROM DOCTORS where DOCTOR_ID = (SELECT doctor_id FROM online_consultation where consultation_id = 9001);
 
@@ -392,7 +362,37 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
         TIME FOR testQuery: 0.0002918243408203125 seconds
         
         avg TIME: 0.00033183097 seconds
+   
+  - SELECT mcenter_name, address, contacts FROM medical_center WHERE address LIKE '%Manasa%' AND city = 'Almaty';
+  
+        TIME FOR testQuery: 0.0003895759582519531 seconds
+        TIME FOR testQuery: 0.00028634071350097656 seconds
+        TIME FOR testQuery: 0.0003104209899902344 seconds
+        TIME FOR testQuery: 0.000385284423828125 seconds
+        TIME FOR testQuery: 0.0004875659942626953 seconds
         
+        avg TIME: 0.00037183761 seconds
+        
+  - SELECT question, answer FROM faq where admin_id = 12;
+  
+        TIME FOR testQuery: 0.00037860870361328125 seconds
+        TIME FOR testQuery: 0.0002434253692626953 seconds
+        TIME FOR testQuery: 0.0002951622009277344 seconds
+        TIME FOR testQuery: 0.0003142356872558594 seconds
+        TIME FOR testQuery: 0.00033211708068847656 seconds
+        
+        avg TIME: 0.0003127098 seconds
+        
+  - SELECT center_name, address, contacts, cost FROM pcr WHERE cost < 15000;
+
+        TIME FOR testQuery: 0.0004925727844238281 seconds
+        TIME FOR testQuery: 0.0005543231964111328 seconds
+        TIME FOR testQuery: 0.00048279762268066406 seconds
+        TIME FOR testQuery: 0.0005033016204833984 seconds
+        TIME FOR testQuery: 0.0005283355712890625 seconds
+        
+        avg TIME: 0.00051226615 seconds
+             
   - SELECT contact_number FROM eco_users WHERE first_name = 'Serik' AND last_name = 'Daniyarev';
 
         TIME FOR testQuery: 0.00023174285888671875 seconds
