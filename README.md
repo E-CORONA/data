@@ -417,6 +417,6 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
  
  <summary>Link for Presentation</summary>
  
- [Presentation](https://youtu.be/VttL2ZBoLD0)
+ [Presentation](https://youtu.be/__XWih0fNFc)
 
 </details>
