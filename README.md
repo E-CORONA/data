@@ -412,9 +412,7 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
  [Documentation](https://docs.google.com/document/d/1UPlMP8mVgdm5YGHszYqusyL1pUTcEybfJZdg2uSBM48/edit?usp=sharing)
 
 </details>
-<details>
-  <summary>Link for documentation</summary>
- 
+<details> 
  <summary>Link for Presentation</summary>
  
  [Presentation](https://youtu.be/__XWih0fNFc)
