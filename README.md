@@ -404,3 +404,15 @@ All queries are available in [queries](https://github.com/E-CORONA/data/tree/mai
         avg TIME: 0.00024013519 seconds
 
 </details>
+
+##  Phase 10 :  Presentation and Demo
+<details>
+  <summary>Link for documentation</summary>
+ 
+ [Documentation](https://docs.google.com/document/d/1UPlMP8mVgdm5YGHszYqusyL1pUTcEybfJZdg2uSBM48/edit?usp=sharing)
+ 
+ <summary>Link for Presentation</summary>
+ 
+ [Presentation](https://youtu.be/VttL2ZBoLD0)
+
+</details>
